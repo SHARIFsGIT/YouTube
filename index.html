@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <!-- CSS style -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="container mx-auto pt-5 pb-3 border-b-2">
+        <div class="flex navbar gap-5 md:gap-0 justify-around items-center">
+            <div class="navbar-start">
+                <img src="Logo.png" width="150" alt="" />
+            </div>
+            <div>
+                <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
+                    Sort by view
+                </button>
+            </div>
+            <div>
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded">
+                    Blogs
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto">
+        <section class="flex justify-center mt-6 gap-3">
+            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
+                All
+            </button></div>
+            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
+                Music
+            </button></div>
+            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
+                Comedy
+            </button></div>
+            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
+                Drawing
+            </button></div>
+        </section>
+        <section class="py-5">
+            <div id="categorySection" class="flex justify-center gap-2 md:gap-5">
+
+            </div>
+        </section>
+        <section id="loadingSpinner" class="hidden my-20">
+            <span class="block mx-auto loading loading-spinner text-error"></span>
+        </section>
+        <section class="w-fit mx-auto">
+            <div id="showCategorySection" class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+            </div>
+        </section>
+    </main>
+
+    <!-- JS script -->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
