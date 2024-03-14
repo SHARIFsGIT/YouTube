@@ -1,3 +1,40 @@
-body{
-    font-family: "Kalam", cursive;
+.font-inter {
+  font-family: "Signika Negative", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+:where(.navbar > *) {
+  display: inline-flex;
+}
+
+.navbar-start {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.navbar-center {
+  flex-shrink: 0;
+}
+
+.navbar-end {
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+.active-btn {
+  background-color: #ff1f3d !important;
+  color: white;
+}
+
+.active-btn:hover {
+  background-color: orange;
 }

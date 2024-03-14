@@ -10,61 +10,47 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="font-inter">
     <!-- header section -->
     <header class="container mx-auto pt-5 pb-3 border-b-2">
-        <div class="flex navbar gap-5 md:gap-0 justify-around items-center">
+        <!-- navbar section -->
+        <div class="navbar gap-5 md:gap-0">
             <div class="navbar-start">
-                <img src="Logo.png" width="150" alt="" />
+                <img src="images/Logo.png" alt="" width="150" />
             </div>
-            <div>
-                <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
-                    Sort by view
-                </button>
-            </div>
-            <div>
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border rounded">
-                    Blogs
-                </button>
+            <li class="navbar-center">
+                <button id="sort-view-btn" onclick="sortByView(this)" class="bg-gray-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-md">Sort by view</button>
+            </li>
+            <div class="navbar-end">
+                <a href="blog.html"><button onclick="blog()" class="bg-red-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-md">Blogs</button></a>
             </div>
         </div>
     </header>
-
+    <!-- main section -->
     <main class="container mx-auto">
-        <section class="flex justify-center mt-6 gap-3">
-            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
-                All
-            </button></div>
-            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
-                Music
-            </button></div>
-            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
-                Comedy
-            </button></div>
-            <div><button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border rounded border-spacing-0">
-                Drawing
-            </button></div>
-        </section>
+        <!-- category buttons -->
         <section class="py-5">
-            <div id="categorySection" class="flex justify-center gap-2 md:gap-5">
+            <div id="category-section" class="flex justify-center gap-2 md:gap-5">
 
             </div>
         </section>
-        <section id="loadingSpinner" class="hidden my-20">
-            <span class="block mx-auto loading loading-spinner text-error"></span>
+        <!-- spinner section -->
+        <section id="loading-spinner" class="hidden my-20">
+            <img class="mx-auto my-32" src="images/loading.gif" alt="">
         </section>
+        <!-- data section -->
         <section class="w-fit mx-auto">
-            <div id="showCategorySection" class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+            <div id="show-category-section" class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+
             </div>
         </section>
     </main>
-
-    <!-- JS script -->
+    <!-- Javascript file -->
     <script src="scripts/script.js"></script>
 </body>
 
